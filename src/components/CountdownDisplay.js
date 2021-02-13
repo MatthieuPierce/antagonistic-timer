@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
     NOTE: Paused or running, the value in this field should always be displayed 
     in mm:ss format (i.e. 25:00). */}
 
+    {/* User Story #19: If the timer is running, the element with the id of time-left should display the remaining time in mm:ss format (decrementing by a value of 1 and updating the display every 1000ms). */}
+
 const CountdownDisplay = (props) => {
   return (
     <div>

@@ -1,5 +1,5 @@
 import { INCREMENT_BREAK, DECREMENT_BREAK, 
-  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP } from './constants';
+  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK } from './constants';
 
 export const breakUp = () => {
   return {
@@ -40,5 +40,11 @@ export const timerStart = () => {
 export const timerStop = () => {
   return {
     type: STOP
+  }
+}
+
+export const timerTick = () => {
+  return {
+    type: TICK
   }
 }
