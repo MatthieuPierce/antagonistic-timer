@@ -6,9 +6,10 @@
     hsla(150, 100%, 70%, 0.5) 3%
 
     );
-    padding: 2rem;
-    border-radius: 100%;
-    max-width: 100%;
+  padding: 2rem;
+  border-radius: 100%;
+  box-sizing: border-box;
+  max-width: 100%;
 }
 
 #playPad .btn {

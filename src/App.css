@@ -1,22 +1,32 @@
 .App {
-  /* background-color: #1e2127; */
+  background-color: #1e2127;
   background: 
     radial-gradient(circle at 80% 10%, 
       hsla(0, 0%, 0%, 0.5), 
       hsla(303, 98%, 50%, 0.5) 70%, 
       hsla(90, 90%, 50%, 0.5)
       ),
-      radial-gradient(circle at 50% 90%, 
+    radial-gradient(circle at 50% 90%, 
       hsla(0, 0%, 0%, 0.7), 
       hsla(303, 98%, 10%, 0.5) 50%, 
       hsla(150, 90%, 50%, 0.9)
-      )
+      ),
+    repeating-conic-gradient(from 0deg at 20% 70%,
+    hsla(0, 0%, 0%, 0.7) 0deg, 
+    hsla(0, 0%, 0%, 0.0) 0.5deg 
+    ),
+    repeating-conic-gradient(from 0deg at 80% 5%,
+    hsla(0, 0%, 0%, 0.7) 0deg, 
+    hsla(0, 0%, 0%, 0.0) 0.5deg 
+    ),
+    repeating-radial-gradient(circle at 50% 50%,
+    hsla(0, 0%, 0%, 0.7) 0%, 
+    hsla(0, 0%, 0%, 0.0) 0.5% 
+    )
     ;
-
-  ;
   color: white;
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   text-align: center;
   min-height: 100vh;
   display: grid;
@@ -27,15 +37,41 @@
   box-sizing: border-box;
 }
 
-/* .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-} */
 
-/* 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .App {
+    animation: App-trix-up infinite 5s linear;
+  }
+
+  /* .App > div {
+    animation: App-trix-down infinite 5s linear;
+  }
+  .App > header {
+    animation: App-trix-down infinite 5s linear;
+  } */
+}
+
+@keyframes App-trix-up {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.01);
+  } 
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* @keyframes App-trix-down {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.75);
+  } 
+  100% {
+    transform: scale(1);
   }
 } */
 
@@ -52,19 +88,8 @@
 .App-header > h1 {
   margin: 0;
 }
-/* .App-link {
-  color: #61dafb;
-} */
 
-/* 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
+
 
 .btn {
   box-sizing: border-box;
