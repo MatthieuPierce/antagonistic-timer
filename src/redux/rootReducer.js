@@ -1,5 +1,5 @@
 import { INCREMENT_BREAK, DECREMENT_BREAK, 
-  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK } 
+  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK, SESSION_TO_BREAK, BREAK_TO_SESSION } 
   from './constants';
 
 //sessionToggle determines whether the countdown type being tracked 
@@ -15,10 +15,11 @@ import { INCREMENT_BREAK, DECREMENT_BREAK,
 
 const initialState = {
   breakDurationMins: 5,
-  sessionDurationMins: 25,
-  remainingBreakTime: 300,
-  remainingSessionTime: 1500,
   countdownRunning: false,
+  // remainingBreakTime: 300,
+  // remainingSessionTime: 1500,
+  remainingCountdown: 1500,
+  sessionDurationMins: 25,
   sessionToggle: true
 }
 
@@ -28,12 +29,12 @@ const rootReducer = (state = initialState, action) => {
       if (state.sessionToggle) {
         return ({
           ...state,
-          remainingSessionTime: state.remainingSessionTime - 1
+          remainingCountdown: state.remainingCountdown - 1
         });
       } else {
         return ({
           ...state,
-          remainingBreakTime: state.remainingBreakTime - 1
+          remainingCountdown: state.remainingCountdown - 1
         })
       }
     case INCREMENT_BREAK:
@@ -86,6 +87,19 @@ const rootReducer = (state = initialState, action) => {
         ...state,
         countdownRunning: false,
       });
+    case SESSION_TO_BREAK:
+      return ({
+        ...state,
+        sessionToggle: false,
+        remainingCountdown: state.breakDurationMins * 60
+      });
+    case BREAK_TO_SESSION:
+      return ({
+        ...state,
+        sessionToggle: true,
+        remainingCountdown: state.sessionDurationMins * 60
+
+      })
     default:
       return state;
   }

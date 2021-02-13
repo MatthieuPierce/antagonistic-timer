@@ -32,7 +32,6 @@ class PlayControls extends React.Component {
         <div id="start_stop"
           onClick={this.startStop}
           className={`btn`}
-
         >
           START / STOP
           </div>

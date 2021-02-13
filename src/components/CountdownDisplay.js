@@ -16,7 +16,12 @@ const CountdownDisplay = (props) => {
 
     {/*User Story #7: I can see an element with a corresponding id="timer-label",
     that contains a string indicating a session is initialized (e.g. "Session").*/}
-    <div id="timer-label">Timer Label Session</div>
+    <div id="timer-label">
+      {(props.sessionToggle)
+        ? `Work It Session`
+        : `Break It`
+      } 
+    </div>
     
     </div>
   )
@@ -25,9 +30,7 @@ const CountdownDisplay = (props) => {
 const mapStateToProps = (state) => {
   return {
     sessionToggle: state.sessionToggle,
-    timeLeft: (state.sessionToggle)
-              ? state.remainingSessionTime
-              : state.remainingBreakTime
+    timeLeft: state.remainingCountdown
   }
 }
 
