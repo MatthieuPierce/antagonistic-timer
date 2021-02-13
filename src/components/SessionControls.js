@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { sessionUp, sessionDown } from '../redux/actions'
+import './SessionControls.css'
 
 class SessionControls extends React.Component {
 constructor(props) {
@@ -12,13 +13,16 @@ render() {
     <div id="sessionPad">
       {/* User Story #2: I can see an element with id="session-label" that contains 
       a string (e.g. "Session Length"). */}
-      <p id="session-label">Session Length (mins):</p>
-
       {/* User Story #6: I can see an element with a corresponding 
       id="session-length", which by default displays a value of 25. */}
-      <div id="session-length">
-        {this.props.sessionDurationMins}
-      </div>
+      <header className="session-header">
+        <h2 id="session-label">
+          Work minutes:
+        </h2>
+        <h2 id="session-length">
+          {this.props.sessionDurationMins}
+        </h2>
+      </header>
     
       {/* User Story #3: I can see two clickable elements with
       corresponding IDs: id="session-decrement" and id="session-increment".
@@ -30,8 +34,9 @@ render() {
       <div id="session-decrement" 
         value="session-decrement"
         onClick={this.props.sessionDownOne}
+        className={`btn`}
         >
-        <h2>Clickable Session Decrement</h2>
+        <h2>Session DOWN</h2>
       </div>
 
       {/* 
@@ -41,8 +46,9 @@ render() {
       <div id="session-increment" 
       value="session-increment"
       onClick={this.props.sessionUpOne}
+      className={`btn`}
       >
-        <h2>Clickable Session Increment</h2>
+        <h2>Session UP</h2>
       </div>
     </div>
 

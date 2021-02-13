@@ -1,0 +1,31 @@
+#sessionPad {
+  background: 
+  repeating-conic-gradient(from 7deg at 80% 80%, 
+    hsla(22, 40%, 40%, 0.5) 0% 90deg,
+    hsla(270, 100%, 50%, 0.5) 90deg 180deg
+    ),
+  repeating-conic-gradient(from 35deg at 20% 20%, 
+    hsla(250, 100%, 40%, 0.95) 0% 90deg,
+    hsla(110, 20%, 70%, 0.95) 90deg 180deg
+  );
+  padding: 2rem;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 100%;
+  max-width: 100%;
+  }
+
+.session-header {
+  background: 
+  repeating-conic-gradient(from 35deg at 60% 20%, 
+    hsla(202, 80%, 40%, 1) 0% 1deg,
+    hsla(120, 40%, 40%, 1) 1deg 2deg
+  );
+  color: white;
+  border-radius: 100%;
+  box-sizing: border-box;
+  display: grid;
+  place-content: center;
+  padding: 1rem;
+  height: 10rem;
+  }

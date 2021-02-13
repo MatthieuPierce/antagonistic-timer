@@ -36,9 +36,9 @@ componentDidMount(){
 
   render() {
     return (
-    <div><h1>
+    <div><h3>
       Timer module thinks countdownRunning is: {`${this.props.countdownRunning}`}
-      </h1>
+      </h3>
     </div>)
     ;
   }

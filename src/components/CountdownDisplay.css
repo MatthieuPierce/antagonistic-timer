@@ -1,0 +1,31 @@
+#countdown-pad {
+  display: grid;
+  min-height: 14rem;
+  border-radius: 100%;
+  background:
+    repeating-linear-gradient(85deg,
+      hsla(180, 100%, 50%, 0.75) 1%,
+      hsla(300, 100%, 50%, 0.75) 2%,
+      hsla(0, 0%, 0%, 0.75) 3% 15%,
+      hsla(180, 100%, 50%, 0.75) 16%
+      ),
+    repeating-linear-gradient(25deg,
+      hsla(180, 100%, 50%, 0.8) 1%,
+      hsla(300, 100%, 50%, 0.8) 2%,
+      hsla(0, 0%, 0%, 0.8) 3% 15%,
+      hsla(180, 100%, 50%, 0.8) 16%
+      );
+  min-width: 100%;
+  max-width: 100%;
+  place-content: center;
+}
+
+#countdown-pad > h3 {
+  mix-blend-mode: difference;
+}
+
+#time-left {
+  font-size: 4rem;
+  mix-blend-mode: difference;
+
+}

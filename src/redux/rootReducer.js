@@ -1,5 +1,6 @@
 import { INCREMENT_BREAK, DECREMENT_BREAK, 
-  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK } from './constants';
+  INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK } 
+  from './constants';
 
 //sessionToggle determines whether the countdown type being tracked 
 // is the session or the break. sessionToggle: true means the session is active
@@ -26,10 +27,12 @@ const rootReducer = (state = initialState, action) => {
     case TICK:
       if (state.sessionToggle) {
         return ({
+          ...state,
           remainingSessionTime: state.remainingSessionTime - 1
         });
       } else {
         return ({
+          ...state,
           remainingBreakTime: state.remainingBreakTime - 1
         })
       }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import { timerReset, timerStart, timerStop } from '../redux/actions';
-
+import './PlayControls.css'
 
 class PlayControls extends React.Component {
   constructor(props){
@@ -25,13 +25,16 @@ class PlayControls extends React.Component {
         timer should begin running from the value currently displayed in 
         id="session-length", even if the value has been incremented or decremented 
         from the original value of 25. */}
-        <h1>
-        PlayControls component thinks countdownRunning is: {`${this.props.countdownRunning}`}
-      </h1>        
+        <h3><p>
+        PlayControls countdownRunning: {`${this.props.countdownRunning}`}
+        </p>
+      </h3>        
         <div id="start_stop"
           onClick={this.startStop}
+          className={`btn`}
+
         >
-          Clickable Start/Stop Element
+          START / STOP
           </div>
 
 
@@ -45,8 +48,10 @@ class PlayControls extends React.Component {
         */}
         <div id="reset"
           onClick={this.props.timerReset}
+          className={`btn`}
+
         >
-          Clickable Reset Element
+          RESET
         </div>
 
       </div>

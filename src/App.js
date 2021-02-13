@@ -17,10 +17,6 @@ function App() {
       <BreakControls />
       <SessionControls />
 
-    {/*User Story #7: I can see an element with a corresponding id="timer-label",
-    that contains a string indicating a session is initialized (e.g. "Session").*/}
-    <div id="timer-label">Timer Session Initialized String</div>
-
     <CountdownDisplay />
 
     <PlayControls />
