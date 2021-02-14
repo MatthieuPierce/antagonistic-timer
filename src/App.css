@@ -30,7 +30,7 @@
   text-align: center;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 0.5rem;
   place-content: start;
   place-items: center;
@@ -38,10 +38,23 @@
 }
 
 
-@media (prefers-reduced-motion: no-preference) {
+/* @media (prefers-reduced-motion: no-preference) {
   .App {
     animation: App-trix-up infinite 5s linear;
+    
   }
+
+  @keyframes App-trix-up {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    } 
+    100% {
+      transform: scale(1);
+    }
+  } */
 
   /* .App > div {
     animation: App-trix-down infinite 5s linear;
@@ -49,19 +62,8 @@
   .App > header {
     animation: App-trix-down infinite 5s linear;
   } */
-}
 
-@keyframes App-trix-up {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.01);
-  } 
-  100% {
-    transform: scale(1);
-  }
-}
+
 
 /* @keyframes App-trix-down {
   0% {
@@ -90,25 +92,28 @@
 }
 
 .btn {
-  box-sizing: border-box;
-  
-  display: grid;
-  place-content: center;
-  background: repeating-radial-gradient(circle at 50% 50%, 
-  rgb(71, 183, 235) 0%, 
-  hsla(350, 80%, 60%, 1) 30%);
+  background: 
+    repeating-radial-gradient(
+      circle at 50% 50%, 
+    hsla(199, 80%, 60%, 1) 0%, 
+    hsla(350, 80%, 60%, 1) 30%);
+  border: white 4px dashed;
   border-radius: 100%;
-  min-height: 5rem;
-  min-width: 5rem;
-  max-width: 10rem;
+  box-sizing: border-box;
+  color: white;
+  display: grid;
+  font-size: calc(12px + 2vmin);
+  min-width: 8rem;
+  max-width: 12rem;
+  margin: 1rem;
+  min-height: 8rem;
+
   /* background-clip: text;
   -webkit-background-clip: text;
   color: transparent; */
-  color: white;
-  border: white 4px dashed;
   mix-blend-mode: difference;
-  margin: 1rem;
-  font-size: calc(12px + 2vmin);
+  padding: 1rem;
+  place-content: center;
 
 }
 

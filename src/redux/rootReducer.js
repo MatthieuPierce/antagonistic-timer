@@ -2,7 +2,7 @@ import { INCREMENT_BREAK, DECREMENT_BREAK,
   INCREMENT_SESSION, DECREMENT_SESSION, RESET, START, STOP, TICK, BREAK_TO_SESSION } 
   from './constants';
 
-//sessionToggle determines whether the countdown type being tracked 
+// sessionToggle determines whether the countdown type being tracked 
 // is the session or the break. sessionToggle: true means the session is active
 // (but not necessarily counting down).
 
@@ -10,7 +10,15 @@ import { INCREMENT_BREAK, DECREMENT_BREAK,
   to <= 0. */
 
   /* User Story #17: I should not be able to set a session or break length
-  to > 60. */
+    to > 60. */
+
+  /* User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
+  reach 00:00), a new break countdown should begin, counting down from the 
+  value currently displayed in the id="break-length" element. */
+
+  /* User Story #25: When a break countdown reaches zero (NOTE: timer MUST 
+    reach 00:00), a new session countdown should begin, counting down from 
+    the value currently displayed in the id="session-length" element. */
 
 
 const initialState = {
