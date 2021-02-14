@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useLayoutEffect } from 'react';
 import { connect } from 'react-redux';
 import { breakToSession, timerTick } from '../redux/actions'
 
@@ -30,8 +30,9 @@ function TimerModule (props) {
     };
   }, [props.countdownRunning]);
 
-  useEffect( () => {
-    if (props.remainingCountdown === 0) {
+ 
+  useLayoutEffect( () => {
+    if (props.remainingCountdown <= -1) {
       props.breakToSession();
     }
   }

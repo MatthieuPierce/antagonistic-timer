@@ -24,13 +24,6 @@ function App() {
     <TimerModule />
 
 
-
-    
-
-
-
-    {/* User Story #22: When a session countdown reaches zero (NOTE: timer MUST reach 00:00), and a new countdown begins, the element with the id of timer-label should display a string indicating a break has begun. */}
-
     {/* User Story #23: When a session countdown reaches zero (NOTE: timer MUST 
     reach 00:00), a new break countdown should begin, counting down from the 
     value currently displayed in the id="break-length" element. */}
