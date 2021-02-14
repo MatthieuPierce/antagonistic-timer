@@ -36,7 +36,7 @@ render() {
         onClick={this.props.sessionDownOne}
         className={`btn`}
         >
-        <h2>Session DOWN</h2>
+        <h3>Session DOWN</h3>
       </div>
 
       {/* 
@@ -48,7 +48,7 @@ render() {
       onClick={this.props.sessionUpOne}
       className={`btn`}
       >
-        <h2>Session UP</h2>
+        <h3>Session UP</h3>
       </div>
     </div>
 

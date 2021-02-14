@@ -1,12 +1,14 @@
 #sessionPad {
   background: 
   repeating-conic-gradient(from 7deg at 80% 80%, 
-    hsla(22, 40%, 40%, 0.5) 0% 90deg,
-    hsla(270, 100%, 50%, 0.5) 90deg 180deg
+    hsla(130, 75%, 45%, 0.5) 0% 90deg,
+    hsla(270, 100%, 50%, 0.5) 90deg 260deg,
+    hsla(66, 100%, 50%, 0.5) 90deg 310deg
     ),
   repeating-conic-gradient(from 35deg at 20% 20%, 
     hsla(250, 100%, 40%, 0.95) 0% 90deg,
     hsla(110, 20%, 70%, 0.95) 90deg 180deg
+
   );
   padding: 2rem;
   height: 100%;
@@ -28,4 +30,8 @@
   place-content: center;
   padding: 1rem;
   height: 10rem;
+  }
+
+  #sessionPad > .btn {
+    color: black;
   }

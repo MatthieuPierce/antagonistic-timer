@@ -89,8 +89,6 @@
   margin: 0;
 }
 
-
-
 .btn {
   box-sizing: border-box;
   
@@ -112,4 +110,8 @@
   margin: 1rem;
   font-size: calc(12px + 2vmin);
 
+}
+
+.flip {
+  filter: invert(90%)
 }

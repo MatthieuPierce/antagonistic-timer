@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { breakToSession, sessionToBreak, timerTick } from '../redux/actions'
+import { breakToSession, timerTick } from '../redux/actions'
 
  {/* User Story #8: I can see an element with corresponding id="time-left".
     NOTE: Paused or running, the value in this field should always be displayed 
@@ -30,6 +30,12 @@ function TimerModule (props) {
     };
   }, [props.countdownRunning]);
 
+  useEffect( () => {
+    if (props.remainingCountdown === 0) {
+      props.breakToSession();
+    }
+  }
+  );
 
     return (
     <div><h3>
@@ -42,7 +48,6 @@ function TimerModule (props) {
 const mapDispatchToProps = (dispatch) => {
   return ({
     breakToSession: () => dispatch(breakToSession()),
-    sessionToBreak: () => dispatch(sessionToBreak()),
     timerTick: () => dispatch(timerTick()),
   })
 }
@@ -50,6 +55,9 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
   return {
     countdownRunning: state.countdownRunning,
+    remainingCountdown: state.remainingCountdown,
+    sessionToggle: state.sessionToggle
+
   }
 }
 

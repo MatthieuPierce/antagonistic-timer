@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { connect } from 'react-redux';
 import './CountdownDisplay.css'
 
@@ -9,8 +9,17 @@ import './CountdownDisplay.css'
   {/* User Story #19: If the timer is running, the element with the id of time-left should display the remaining time in mm:ss format (decrementing by a value of 1 and updating the display every 1000ms). */}
 
 const CountdownDisplay = (props) => {
+  
+  const padEl = useRef(null);
+
+  useEffect( () => {
+    (!props.sessionToggle)
+    ? padEl.current.className = 'flip'
+    : padEl.current.className = null
+  }, [props.sessionToggle]);
+
   return (
-    <div id="countdown-pad">
+    <div id="countdown-pad" ref={padEl}>
       <h3>Time left (mm:ss):</h3>
       <h2 id="time-left">{props.timeLeft}</h2>
 

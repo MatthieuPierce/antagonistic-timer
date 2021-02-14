@@ -25,6 +25,13 @@ class PlayControls extends React.Component {
         timer should begin running from the value currently displayed in 
         id="session-length", even if the value has been incremented or decremented 
         from the original value of 25. */}
+
+        {/* User Story #20: If the timer is running and I click the element
+        with id="start_stop", the countdown should pause. */}
+
+        {/* User Story #21: If the timer is paused and I click the element
+        with id="start_stop", the countdown should resume running from the 
+        point at which it was paused. */}
         <h3><p>
         PlayControls countdownRunning: {`${this.props.countdownRunning}`}
         </p>

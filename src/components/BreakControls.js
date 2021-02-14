@@ -37,7 +37,7 @@ render() {
         onClick={this.props.breakDownOne}
         className={`btn`}
         >
-        <h2>Break UP</h2>
+        <h3>Break DOWN</h3>
       </div>
 
       {/* 
@@ -49,7 +49,7 @@ render() {
         value="break-increment"
       onClick={this.props.breakUpOne}
       >
-        <h2>Break Down</h2>
+        <h3>Break UP</h3>
       </div>
     </div>
 
