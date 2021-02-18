@@ -24,10 +24,8 @@ import { INCREMENT_BREAK, DECREMENT_BREAK,
 const initialState = {
   breakDurationMins: 5,
   countdownRunning: false,
-  // remainingBreakTime: 300,
-  // remainingSessionTime: 1500,
-  remainingCountdown: 5,
-  sessionDurationMins: 1,
+  remainingCountdown: 1500,
+  sessionDurationMins: 25,
   sessionToggle: true
 }
 
@@ -55,7 +53,7 @@ const rootReducer = (state = initialState, action) => {
           });
       }
     case DECREMENT_BREAK:
-      if (state.breakDurationMins <= 0) {
+      if (state.breakDurationMins <= 1) {
         return state;
       } else {
         return ({
@@ -73,7 +71,7 @@ const rootReducer = (state = initialState, action) => {
           });
       }
     case DECREMENT_SESSION:
-      if (state.sessionDurationMins <= 0) {
+      if (state.sessionDurationMins <= 1) {
         return state;
       } else {
         return ({

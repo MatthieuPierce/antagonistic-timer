@@ -114,7 +114,7 @@
   mix-blend-mode: difference;
   padding: 1rem;
   place-content: center;
-
+  user-select: none;
 }
 
 .flip {

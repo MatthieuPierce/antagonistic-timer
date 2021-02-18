@@ -7,21 +7,21 @@ function BeepO (props) {
 
   const [audioCont, setAudioCont] = useState(null);
 
-  // useEffect( () => {
-  //   // option #2: create a single audioContext at first render and leave it open until unmount
-  //   // for multiple effects, beeps, etc? 
-  //   setAudioCont(new (window.AudioContext || window.webkitAudioContext)());
+  useEffect( () => {
+    // option #2: create a single audioContext at first render and leave it open until unmount
+    // for multiple effects, beeps, etc? 
+    setAudioCont(new (window.AudioContext || window.webkitAudioContext)());
 
-  // }, []);
+  }, []);
 
   
 
   useEffect( () => {
   if (props.remainingCountdown === 0) {
     // option #1: create (and close) audioContext on individual trigger
-    setAudioCont(new window.AudioContext());
-    console.log(`beepO audioCont is now:`);
-    console.log(audioCont);
+    // setAudioCont(new window.AudioContext());
+    // console.log(`beepO audioCont is now:`);
+    // console.log(audioCont);
 
     // create oscillator(s)
     let oscOne = audioCont.createOscillator();
@@ -75,7 +75,9 @@ function BeepO (props) {
   }
   }, [props.remainingCountdown])
 
-  return null;
+  return (
+    <audio id="beep" ref={beepAudio}>Beep, yinz.</audio>
+  );
 }
 
 const mapStateToProps = (state) => {

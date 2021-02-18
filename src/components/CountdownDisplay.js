@@ -21,7 +21,11 @@ const CountdownDisplay = (props) => {
   return (
     <div id="countdown-pad" ref={padEl}>
       <h3>Time left (mm:ss):</h3>
-      <h2 id="time-left">{props.timeLeft}</h2>
+      <h2 id="time-left">{
+
+        new Date(props.timeLeft * 1000).toISOString().substr(14, 5)
+        
+        }</h2>
 
     {/*User Story #7: I can see an element with a corresponding id="timer-label",
     that contains a string indicating a session is initialized (e.g. "Session").*/}
