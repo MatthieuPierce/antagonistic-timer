@@ -16,7 +16,6 @@ function TimerModule (props) {
   useEffect( () => {
     if (props.countdownRunning) {
       setInterv(setInterval(() => {
-        console.log(`just about to timerTick`)
         props.timerTick();
       }, 1000));
     }
@@ -43,13 +42,7 @@ function TimerModule (props) {
 
   {/* User Story #28: The audio element with id of beep must stop playing and be rewound to the beginning when the element with the id of reset is clicked. */}
 
-    return (
-    <div>
-      <h3>
-        Timer module thinks countdownRunning is: {`${props.countdownRunning}`}
-      </h3>
-    </div>)
-    ;
+    return null;
 }
 
 const mapDispatchToProps = (dispatch) => {

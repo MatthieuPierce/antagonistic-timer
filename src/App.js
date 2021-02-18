@@ -5,6 +5,8 @@ import BreakControls from './components/BreakControls';
 import SessionControls from './components/SessionControls';
 import PlayControls from './components/PlayControls'
 import TimerModule from './components/TimerModule';
+import BeepO from './components/BeepO';
+
 
 
 function App() {
@@ -19,6 +21,8 @@ function App() {
       <CountdownDisplay />
       <PlayControls />
       <TimerModule />
+      <BeepO />
+      
     </div>
   );
 }
