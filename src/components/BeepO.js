@@ -1,5 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import {connect} from 'react-redux';
+import beepMp3 from './beeoowoop01.mp3';
+import beepOgg from './beeoowoop01.ogg'
 
 function BeepO (props) {
 
@@ -22,7 +24,8 @@ function BeepO (props) {
   useEffect(() => {
     //the only thing that changes resetCount in state/store is the reset button,
     //so when it changes, stop the audio element if necessary
-    beepAudio.current.load();
+    beepAudio.current.pause();
+    beepAudio.current.currentTime = 0;
   }, [props.resetCount])
   
 
@@ -86,10 +89,10 @@ function BeepO (props) {
   return (
     <audio 
       id="beep" 
-      preload
+      preload="true"
       ref={beepAudio}>
-      <source src="/beeoowoop01.ogg" type="audio/ogg"></source>
-      <source src="/beeoowoop01.mp3" type="audio/mpeg"></source>
+      <source src={beepMp3} type="audio/ogg"></source>
+      <source src={beepOgg} type="audio/mpeg"></source>
       Beep, yinz.
     </audio>
   );
