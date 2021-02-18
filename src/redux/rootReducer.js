@@ -26,7 +26,8 @@ const initialState = {
   countdownRunning: false,
   remainingCountdown: 1500,
   sessionDurationMins: 25,
-  sessionToggle: true
+  sessionToggle: true,
+  resetCount: 0
 }
 
 const rootReducer = (state = initialState, action) => {
@@ -49,7 +50,10 @@ const rootReducer = (state = initialState, action) => {
       } else {
         return ({
           ...state,
-          breakDurationMins: state.breakDurationMins + 1
+          breakDurationMins: state.breakDurationMins + 1,
+          remainingCountdown: (!state.sessionToggle && !state.countdownRunning)
+          ? state.remainingCountdown + 60
+          : state.remainingCountdown
           });
       }
     case DECREMENT_BREAK:
@@ -58,7 +62,10 @@ const rootReducer = (state = initialState, action) => {
       } else {
         return ({
           ...state,
-          breakDurationMins: state.breakDurationMins - 1
+          breakDurationMins: state.breakDurationMins - 1,
+          remainingCountdown: (!state.sessionToggle && !state.countdownRunning)
+          ? state.remainingCountdown - 60
+          : state.remainingCountdown
           });
       }
     case INCREMENT_SESSION:
@@ -67,7 +74,10 @@ const rootReducer = (state = initialState, action) => {
       } else {
         return ({
           ...state,
-          sessionDurationMins: state.sessionDurationMins + 1
+          sessionDurationMins: state.sessionDurationMins + 1,
+          remainingCountdown: (state.sessionToggle && !state.countdownRunning)
+                              ? state.remainingCountdown + 60
+                              : state.remainingCountdown
           });
       }
     case DECREMENT_SESSION:
@@ -76,12 +86,16 @@ const rootReducer = (state = initialState, action) => {
       } else {
         return ({
           ...state,
-          sessionDurationMins: state.sessionDurationMins - 1
+          sessionDurationMins: state.sessionDurationMins - 1,
+          remainingCountdown: (state.sessionToggle && !state.countdownRunning)
+          ? state.remainingCountdown - 60
+          : state.remainingCountdown
           });
       }
     case RESET:
       return (
-        {...initialState}
+        {...initialState,
+        resetCount: state.resetCount + 1 }
       );
     case START:
       return ({

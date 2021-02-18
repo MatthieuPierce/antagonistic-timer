@@ -20,11 +20,16 @@ const CountdownDisplay = (props) => {
 
   return (
     <div id="countdown-pad" ref={padEl}>
-      <h3>Time left (mm:ss):</h3>
-      <h2 id="time-left">{
+      <h3>Time left:</h3>
+      <h2 id="time-left">
+        { 
+          // Got too cute with Date objects
+          // new Date(props.timeLeft * 1000).toISOString().substr(14, 5)
+          
+          //switching to simple maths
+          `${Math.floor(props.timeLeft / 60)}`.padStart(2, '0') + `:` +
+          `${props.timeLeft % 60}`.padStart(2, '0')
 
-        new Date(props.timeLeft * 1000).toISOString().substr(14, 5)
-        
         }</h2>
 
     {/*User Story #7: I can see an element with a corresponding id="timer-label",
@@ -44,7 +49,7 @@ const CountdownDisplay = (props) => {
 
     <div id="timer-label">
       {(props.sessionToggle)
-        ? `Work It Session`
+        ? `Work It`
         : `Break It`
       } 
     </div>
