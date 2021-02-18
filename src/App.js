@@ -6,7 +6,7 @@ import SessionControls from './components/SessionControls';
 import PlayControls from './components/PlayControls'
 import TimerModule from './components/TimerModule';
 import BeepO from './components/BeepO';
-import ReactFCCtest from 'react-fcctest';
+// import ReactFCCtest from 'react-fcctest';
 
 
 
@@ -24,7 +24,7 @@ function App() {
       <PlayControls />
       <TimerModule />
       <BeepO />
-      <ReactFCCtest />
+      {/* <ReactFCCtest /> */}
     </div>
   );
 }
