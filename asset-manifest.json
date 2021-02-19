@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/antagonistic-timer/static/css/main.e77195f8.chunk.css",
-    "main.js": "/antagonistic-timer/static/js/main.f57628ce.chunk.js",
-    "main.js.map": "/antagonistic-timer/static/js/main.f57628ce.chunk.js.map",
-    "runtime-main.js": "/antagonistic-timer/static/js/runtime-main.ddae5226.js",
-    "runtime-main.js.map": "/antagonistic-timer/static/js/runtime-main.ddae5226.js.map",
-    "static/js/2.3a0fc81f.chunk.js": "/antagonistic-timer/static/js/2.3a0fc81f.chunk.js",
-    "static/js/2.3a0fc81f.chunk.js.map": "/antagonistic-timer/static/js/2.3a0fc81f.chunk.js.map",
-    "static/js/3.ea145dc0.chunk.js": "/antagonistic-timer/static/js/3.ea145dc0.chunk.js",
-    "static/js/3.ea145dc0.chunk.js.map": "/antagonistic-timer/static/js/3.ea145dc0.chunk.js.map",
+    "main.css": "/antagonistic-timer/static/css/main.e41da604.chunk.css",
+    "main.js": "/antagonistic-timer/static/js/main.e8b2e262.chunk.js",
+    "main.js.map": "/antagonistic-timer/static/js/main.e8b2e262.chunk.js.map",
+    "runtime-main.js": "/antagonistic-timer/static/js/runtime-main.1313b129.js",
+    "runtime-main.js.map": "/antagonistic-timer/static/js/runtime-main.1313b129.js.map",
+    "static/js/2.676caebc.chunk.js": "/antagonistic-timer/static/js/2.676caebc.chunk.js",
+    "static/js/2.676caebc.chunk.js.map": "/antagonistic-timer/static/js/2.676caebc.chunk.js.map",
+    "static/js/3.13d7daf0.chunk.js": "/antagonistic-timer/static/js/3.13d7daf0.chunk.js",
+    "static/js/3.13d7daf0.chunk.js.map": "/antagonistic-timer/static/js/3.13d7daf0.chunk.js.map",
     "index.html": "/antagonistic-timer/index.html",
-    "static/css/main.e77195f8.chunk.css.map": "/antagonistic-timer/static/css/main.e77195f8.chunk.css.map",
-    "static/js/2.3a0fc81f.chunk.js.LICENSE.txt": "/antagonistic-timer/static/js/2.3a0fc81f.chunk.js.LICENSE.txt",
+    "static/css/main.e41da604.chunk.css.map": "/antagonistic-timer/static/css/main.e41da604.chunk.css.map",
+    "static/js/2.676caebc.chunk.js.LICENSE.txt": "/antagonistic-timer/static/js/2.676caebc.chunk.js.LICENSE.txt",
     "static/media/beeoowoop01.0d8a921e.mp3": "/antagonistic-timer/static/media/beeoowoop01.0d8a921e.mp3",
     "static/media/beeoowoop01.60efcc02.ogg": "/antagonistic-timer/static/media/beeoowoop01.60efcc02.ogg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ddae5226.js",
-    "static/js/2.3a0fc81f.chunk.js",
-    "static/css/main.e77195f8.chunk.css",
-    "static/js/main.f57628ce.chunk.js"
+    "static/js/runtime-main.1313b129.js",
+    "static/js/2.676caebc.chunk.js",
+    "static/css/main.e41da604.chunk.css",
+    "static/js/main.e8b2e262.chunk.js"
   ]
 }
