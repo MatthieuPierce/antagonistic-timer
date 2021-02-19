@@ -1,9 +1,11 @@
 #playPad {
+  grid-area: rest;
+  transform: translate3d(-05vw, 25vh, -5vmin);
   background: 
   repeating-radial-gradient(circle at 10% 50%,
-    hsla(150, 100%, 70%, 0.5) 1%,
-    hsla(50, 100%, 70%, 0.5) 2%,
-    hsla(150, 100%, 70%, 0.5) 3%
+    hsla(150, 100%, 70%, 0.2) 1%,
+    hsla(50, 100%, 70%, 0.3) 2%,
+    hsla(150, 100%, 70%, 0.2) 3%
 
     );
   border-radius: 100%;
@@ -13,15 +15,11 @@
         "left right";
   place-content: center;
   place-items: center;
-  gap: 2px;
-  width: 41vmin;
-  height: 41vmin;
+  gap: 1rem;
+  width: 31vmin;
+  height: 31vmin;
   min-height: 13rem;
   min-width: 13rem;
   max-width: 100%;
   margin: 0rem;
-}
-
-#playPad .btn {
-  color: white;
 }

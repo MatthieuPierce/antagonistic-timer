@@ -1,13 +1,15 @@
 #sessionPad {
+  transform: translate3d(25vw, -26vh, -00vmin);
+  grid-area: rest;
   background: 
   repeating-conic-gradient(from 7deg at 80% 80%, 
-    hsla(130, 75%, 45%, 0.5) 0% 90deg,
+    hsla(130, 75%, 45%, 0.4) 0% 90deg,
     hsla(270, 100%, 50%, 0.5) 90deg 260deg,
-    hsla(66, 100%, 50%, 0.5) 90deg 310deg
+    hsla(66, 100%, 50%, 0.4) 90deg 310deg
     ),
   repeating-conic-gradient(from 35deg at 20% 20%, 
-    hsla(250, 100%, 40%, 0.95) 0% 90deg,
-    hsla(110, 20%, 70%, 0.95) 90deg 180deg
+    hsla(250, 100%, 40%, 0.5) 0% 90deg,
+    hsla(110, 20%, 70%, 0.5) 90deg 180deg
 
   );
   padding: 2rem;
@@ -15,7 +17,6 @@
   box-sizing: border-box;
   border-radius: 100%;
   max-width: 100%;
-
   border-radius: 100%;
   box-sizing: border-box;
   display: grid;
@@ -33,21 +34,84 @@
 
   }
 
+@media (prefers-reduced-motion: no-preference) {
+  #sessionPad {
+    animation: rotatoZig infinite 18s linear;
+  }
+  @keyframes rotatoZig {
+    0% {
+      transform:  
+                  rotate(0deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(0);
+    }
+    10% {
+      transform:  
+                  rotate(0deg) 
+                  rotate3d(0, 0, 0) 
+                  translate3d(22vmin, -42vmin, 5vmin);
+    }
+    25% {
+      transform:  
+                  rotate(0deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(12vmin, 62vmin, 10vmin);
+    }
+    50% {
+      transform:  
+                  rotate(0deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(-32vmin, -42vmin, -15vmin);
+    }
+    60% {
+      transform:  
+                  rotate(180deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(-20vmin, 0vmin, 10vmin);
+    }
+    75% {
+      transform:  
+                  rotate(270deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(12vmin, 32vmin, 40vmin);
+    }
+    100% {
+      transform:  
+                  rotate(360deg)
+                  rotate3d(0, 0, 0) 
+                  translate3d(0, 0, 0);
+    }
+  }
+}
+
+
 .session-header {
   background: 
   repeating-conic-gradient(from 35deg at 60% 20%, 
-    hsla(202, 80%, 40%, 1) 0% 1deg,
-    hsla(120, 40%, 40%, 1) 1deg 2deg
+    hsla(202, 80%, 40%, 0.8) 0% 1deg,
+    hsla(120, 40%, 40%, 0.9) 1deg 2deg
   );
   color: white;
   border-radius: 100%;
   box-sizing: border-box;
+  grid-area: top;
   display: grid;
   place-content: center;
-  padding: 1rem;
-  height: 10rem;
+  place-items: center;
+  height: 20vmin;
+  width: 20vmin;
+  min-height: 5rem;
+  min-width: 5rem;
   }
 
-  #sessionPad > .btn {
+  /* #sessionPad > .btn {
     color: black;
+  } */
+
+  #session-decrement {
+    grid-area: left;
+  }
+  
+  #session-increment {
+    grid-area: right;
   }

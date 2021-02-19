@@ -17,7 +17,7 @@ render() {
       id="session-length", which by default displays a value of 25. */}
       <header className="session-header">
         <h2 id="session-label">
-          Work minutes:
+          Work
         </h2>
         <h2 id="session-length">
           {this.props.sessionDurationMins}

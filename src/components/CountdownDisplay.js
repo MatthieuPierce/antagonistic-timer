@@ -20,7 +20,6 @@ const CountdownDisplay = (props) => {
 
   return (
     <div id="countdown-pad" ref={padEl}>
-      <h3>Time left:</h3>
       <h2 id="time-left">
         { 
           // Got too cute with Date objects
@@ -44,9 +43,6 @@ const CountdownDisplay = (props) => {
     {/* User Story #24: When a break countdown reaches zero (NOTE: timer MUST 
     reach 00:00), and a new countdown begins, the element with the id of 
     timer-label should display a string indicating a session has begun. */}
-
-
-
     <div id="timer-label">
       {(props.sessionToggle)
         ? `Work It`

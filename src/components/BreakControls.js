@@ -15,7 +15,7 @@ render() {
       a string (e.g. "Break Length"). */}
       <header className="break-header">
         <h2 id="break-label">
-          Break minutes:
+          Break
         </h2>
         <h2 id="break-length">
           {this.props.breakDurationMins}

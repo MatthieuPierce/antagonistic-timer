@@ -1,4 +1,6 @@
 #countdown-pad {
+  transform: translate3d(0vw, 0vh, 10vmin);
+  grid-area: rest;
   display: grid;
   border-radius: 100%;
   background:
@@ -19,22 +21,18 @@
   text-shadow:2px 2px hsla(0, 0%, 0%, 0.75);
   border-radius: 100%;
   box-sizing: border-box;
-  grid: "top top"
-        "left right";
+  box-shadow: 0.5rem 0.5rem hsla(0, 0%, 0%, 0.8);
+  grid: "top"
+        "bot";
   place-content: center;
   place-items: center;
   gap: 2px;
-  width: 41vmin;
-  height: 41vmin;
+  width: 31vmin;
+  height: 31vmin;
   min-height: 13rem;
   min-width: 13rem;
   max-width: 100%;
   margin: 0rem;
-
-}
-
-#countdown-pad > h3 {
-  mix-blend-mode: difference;
 }
 
 #time-left {

@@ -1,9 +1,11 @@
 #breakPad {
+  grid-area: rest;
+  transform: translate3d(-25vw, -30vh, -00vmin);
   background: 
   repeating-conic-gradient(from 20deg at 55% 30%, 
-    hsla(22, 40%, 40%, 0.8) 0deg,
-    hsla(300, 80%, 70%, 0.9) 1deg,
-    hsla(22, 40%, 40%, 0.8) 2deg
+    hsla(22, 40%, 40%, 0.6) 0deg,
+    hsla(300, 80%, 70%, 0.7) 1deg,
+    hsla(22, 40%, 40%, 0.6) 2deg
     );
   border-radius: 100%;
   box-sizing: border-box;
@@ -35,7 +37,6 @@
   display: grid;
   place-content: center;
   place-items: center;
-  /* padding: 1rem; */
   height: 20vmin;
   width: 20vmin;
   min-height: 5rem;
@@ -44,7 +45,6 @@
 
 .break-header h2 {
   box-sizing: border-box;
-  font-size: calc(10px + 2vmin);
   width: 100%;
 }
 
