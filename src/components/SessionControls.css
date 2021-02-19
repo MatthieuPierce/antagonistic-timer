@@ -5,10 +5,10 @@
   repeating-conic-gradient(from 7deg at 80% 80%, 
     hsla(130, 75%, 45%, 0.4) 0% 90deg,
     hsla(270, 100%, 50%, 0.5) 90deg 260deg,
-    hsla(66, 100%, 50%, 0.4) 90deg 310deg
+    hsla(236, 100%, 50%, 0.2) 90deg 310deg
     ),
   repeating-conic-gradient(from 35deg at 20% 20%, 
-    hsla(250, 100%, 40%, 0.5) 0% 90deg,
+    hsla(250, 100%, 40%, 0.4) 0% 90deg,
     hsla(110, 20%, 70%, 0.5) 90deg 180deg
 
   );
@@ -36,50 +36,55 @@
 
 @media (prefers-reduced-motion: no-preference) {
   #sessionPad {
-    animation: rotatoZig infinite 18s linear;
+    animation: rotatoZig 8s infinite 1s linear;
+  }
+  #breakPad {
+    animation: rotatoZig 12s infinite 3s linear;
+  }
+
+  #playPad {
+    animation: rotatoZig 20s infinite 5s linear;
   }
   @keyframes rotatoZig {
     0% {
       transform:  
-                  rotate(0deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(0);
+        rotate3d(1, 1, 1, 0deg) 
+        translate3d(0);
     }
     10% {
       transform:  
-                  rotate(0deg) 
-                  rotate3d(0, 0, 0) 
-                  translate3d(22vmin, -42vmin, 5vmin);
+        rotate3d(0.1, 0.1, 0.1, 25deg)  
+        translate3d(22vmin, -27vmin, 5vmin);
     }
     25% {
       transform:  
-                  rotate(0deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(12vmin, 62vmin, 10vmin);
+      rotate3d(3.1, 3.1, 3.1, 45deg)  
+      translate3d(12vmin, 12vmin, 10vmin);
     }
     50% {
       transform:  
-                  rotate(0deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(-32vmin, -42vmin, -15vmin);
+      rotate3d(0.5, 0.5, 0.5, -25deg)  
+      translate3d(-32vmin, -27vmin, -15vmin);
     }
     60% {
       transform:  
-                  rotate(180deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(-20vmin, 0vmin, 10vmin);
+      rotate3d(1.1, 1.1, 1.1, 95deg)  
+      translate3d(-20vmin, 0vmin, 10vmin);
     }
     75% {
       transform:  
-                  rotate(270deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(12vmin, 32vmin, 40vmin);
+      rotate3d(0.1, 0.1, 0.1, 45deg)  
+      translate3d(7vmin, 15vmin, 30vmin);
+    }
+    90% {
+      transform:  
+      rotate3d(1.1, 1.1, 1.1, 25deg)  
+      translate3d(-5vmin, 10vmin, 10vmin);
     }
     100% {
       transform:  
-                  rotate(360deg)
-                  rotate3d(0, 0, 0) 
-                  translate3d(0, 0, 0);
+      rotate3d(1, 1, 1, 0deg) 
+      translate3d(0, 0, 0);
     }
   }
 }

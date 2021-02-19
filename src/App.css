@@ -1,5 +1,7 @@
 .App {
   background-color: #1e2127;
+  user-select: none;
+
   background: 
     radial-gradient(circle at 80% 10%, 
       hsla(0, 0%, 0%, 0.5), 
@@ -114,7 +116,7 @@
   box-sizing: border-box;
   color: white;
   display: grid;
-  font-size: calc(12px + 2vmin);
+  font-size: calc(12px + 1.7vmin);
   width: 15vmin;
   height: 15vmin;
   min-width: 5rem;

@@ -1,6 +1,6 @@
 #playPad {
   grid-area: rest;
-  transform: translate3d(-05vw, 25vh, -5vmin);
+  transform: translate3d(25vw, 25vh, -5vmin);
   background: 
   repeating-radial-gradient(circle at 10% 50%,
     hsla(150, 100%, 70%, 0.2) 1%,

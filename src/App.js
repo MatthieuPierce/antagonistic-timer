@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1> Antagonistic Timer</h1>
-        <h2>Work easy knowing something ugly is happening in this tab.</h2>
+        <h2>Live in the serenity of knowing that whatever you're doing, something uglier is happening here.</h2>
       </header>
       <>
         <BreakControls />
