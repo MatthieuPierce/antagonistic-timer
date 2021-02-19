@@ -1,14 +1,25 @@
 #breakPad {
   background: 
   repeating-conic-gradient(from 20deg at 55% 30%, 
-    hsla(22, 40%, 40%, 1) 0deg,
-    hsla(300, 80%, 70%, 1) 1deg,
-    hsla(22, 40%, 40%, 1) 2deg
+    hsla(22, 40%, 40%, 0.8) 0deg,
+    hsla(300, 80%, 70%, 0.9) 1deg,
+    hsla(22, 40%, 40%, 0.8) 2deg
     );
   border-radius: 100%;
   box-sizing: border-box;
-  padding: 2rem;
+  display: grid;
+  grid: "top top"
+        "left right";
+  place-content: center;
+  place-items: center;
+  gap: 2px;
+  width: 41vmin;
+  height: 41vmin;
+  min-height: 13rem;
+  min-width: 13rem;
   max-width: 100%;
+  margin: 0rem;
+  /* padding: 15%; */
 
 }
 
@@ -20,15 +31,27 @@
   color: white;
   border-radius: 100%;
   box-sizing: border-box;
+  grid-area: top;
   display: grid;
   place-content: center;
+  place-items: center;
   /* padding: 1rem; */
-  min-height: 8rem;
-  min-width: 8rem;
+  height: 20vmin;
+  width: 20vmin;
+  min-height: 5rem;
+  min-width: 5rem;
 }
 
 .break-header h2 {
   box-sizing: border-box;
   font-size: calc(10px + 2vmin);
   width: 100%;
+}
+
+#break-decrement {
+  grid-area: left;
+}
+
+#break-increment {
+  grid-area: right;
 }

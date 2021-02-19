@@ -1,6 +1,5 @@
 #countdown-pad {
   display: grid;
-  min-height: 14rem;
   border-radius: 100%;
   background:
     repeating-linear-gradient(85deg,
@@ -15,10 +14,24 @@
       hsla(0, 0%, 0%, 0.8) 3% 15%,
       hsla(180, 100%, 50%, 0.8) 16%
       );
-  min-width: 100%;
-  max-width: 100%;
+  /* min-width: 100%;
+  max-width: 100%; */
+  text-shadow:2px 2px hsla(0, 0%, 0%, 0.75);
+  border-radius: 100%;
+  box-sizing: border-box;
+  grid: "top top"
+        "left right";
   place-content: center;
-  text-shadow:2px 2px hsla(0, 0%, 0%, 0.75)}
+  place-items: center;
+  gap: 2px;
+  width: 41vmin;
+  height: 41vmin;
+  min-height: 13rem;
+  min-width: 13rem;
+  max-width: 100%;
+  margin: 0rem;
+
+}
 
 #countdown-pad > h3 {
   mix-blend-mode: difference;

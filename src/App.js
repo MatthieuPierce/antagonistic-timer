@@ -18,13 +18,16 @@ function App() {
         <h1> Antagonistic Timer</h1>
         <h2>Work easy knowing something ugly is happening in this tab.</h2>
       </header>
-      <BreakControls />
-      <SessionControls />
-      <CountdownDisplay />
-      <PlayControls />
-      <TimerModule />
-      <BeepO />
-      {/* <ReactFCCtest /> */}
+      <>
+        <BreakControls />
+        <SessionControls />
+        <CountdownDisplay />
+        <PlayControls />
+        <TimerModule />
+        <BeepO />
+        {/* <ReactFCCtest /> */}
+
+      </>
     </div>
   );
 }
