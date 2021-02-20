@@ -1,3 +1,17 @@
+:root {
+  --break-x-translate: -25vw;
+  --break-y-translate: -30vh;
+  --break-z-translate: 00vmin;
+
+  --session-x-translate: 25vw;
+  --session-y-translate: -26vh;
+  --session-z-translate: 00vmin;
+
+  --play-x-translate: 25vw;
+  --play-y-translate: 25vh;
+  --play-z-translate: -5vmin;
+}
+
 body {
   margin: 0;
   padding: 0;

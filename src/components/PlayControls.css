@@ -1,6 +1,9 @@
 #playPad {
   grid-area: rest;
-  transform: translate3d(25vw, 25vh, -5vmin);
+  transform: translate3d(
+    var(--play-x-translate), 
+    var(--play-y-translate), 
+    var(--play-z-translate));
   background: 
   repeating-radial-gradient(circle at 10% 50%,
     hsla(150, 100%, 70%, 0.2) 1%,
@@ -22,4 +25,93 @@
   min-width: 13rem;
   max-width: 100%;
   margin: 0rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  #playPad {
+    animation: rotatoZigPlay 10s infinite 1s linear;
+  }
+  @keyframes rotatoZigPlay {
+    0% {
+      transform:  
+        rotate3d(1, 1, 1, 0deg)
+        rotate(0deg) 
+        translate3d(
+          calc(var(--play-x-translate) + 0vw),
+          calc(var(--play-y-translate) + 0vh),
+          calc(var(--play-z-translate) + 0vmin)
+          );
+    }
+    10% {
+      transform:  
+        rotate3d(0.1, 0.1, 1, 25deg)
+        rotate(10deg)  
+        translate3d(
+          calc(var(--play-x-translate) + -2.5vw),
+          calc(var(--play-y-translate) + -2.5vh),
+          calc(var(--play-z-translate) + 0vmin)
+          );
+    }
+    25% {
+      transform:  
+      rotate3d(3.1, 3.1, 3.1, 45deg)  
+      rotate(40deg)  
+      translate3d(
+        calc(var(--play-x-translate) + -5vw),
+        calc(var(--play-y-translate) + -5vh),
+        calc(var(--play-z-translate) + 0vmin)
+        );
+    }
+    50% {
+      transform:  
+      rotate3d(0.5, 0.5, 0.5, -25deg)  
+      rotate(150deg)  
+      translate3d(
+        calc(var(--play-x-translate) + -2.5vw),
+        calc(var(--play-y-translate) + -2.5vh),
+        calc(var(--play-z-translate) + 0vmin)
+        );
+    }
+    60% {
+      transform:  
+      rotate3d(1.1, 1.1, 1.1, 15deg)  
+      rotate(200deg)  
+      translate3d(
+        calc(var(--play-x-translate) + -7vw),
+        calc(var(--play-y-translate) + -7vh),
+        calc(var(--play-z-translate) + 0vmin)
+        );
+    }
+    75% {
+      transform:  
+      rotate3d(0.1, 0.1, 0.1, 45deg)  
+      rotate(250deg)  
+      translate3d(
+        calc(var(--play-x-translate) + -20vw),
+        calc(var(--play-y-translate) + -10vh),
+        calc(var(--play-z-translate) + 0vmin)
+        );
+    }
+    90% {
+      transform:  
+      rotate3d(1.1, 1.1, 1.1, 25deg)  
+      rotate(310deg)  
+      translate3d(
+        calc(var(--play-x-translate) + -3vw),
+        calc(var(--play-y-translate) + -3vh),
+        calc(var(--play-z-translate) + 3vmin)
+        );
+    }
+    100% {
+      transform:  
+      rotate3d(1, 1, 1, 0deg)
+      rotate(360deg) 
+      translate3d(
+        calc(var(--play-x-translate) + 0vw),
+        calc(var(--play-y-translate) + 0vh),
+        calc(var(--play-z-translate) + 1vmin)
+        );
+    }
+  }
 }

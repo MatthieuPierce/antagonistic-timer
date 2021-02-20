@@ -1,31 +1,25 @@
 .App {
+  display: grid;
   background-color: #1e2127;
   user-select: none;
-
-  background: 
-    radial-gradient(circle at 80% 10%, 
-      hsla(0, 0%, 0%, 0.5), 
-      hsla(303, 98%, 50%, 0.5) 70%, 
-      hsla(90, 90%, 50%, 0.5)
-      ),
-    radial-gradient(circle at 50% 90%, 
-      hsla(0, 0%, 0%, 0.7), 
-      hsla(303, 98%, 10%, 0.5) 50%, 
-      hsla(150, 90%, 50%, 0.9)
-      ),
+  background:
+    radial-gradient(circle at 80% 10%,
+      hsla(0, 0%, 0%, 0.5),
+      hsla(303, 98%, 50%, 0.5) 70%,
+      hsla(90, 90%, 50%, 0.5)),
+    radial-gradient(circle at 50% 90%,
+      hsla(0, 0%, 0%, 0.7),
+      hsla(303, 98%, 10%, 0.5) 50%,
+      hsla(150, 90%, 50%, 0.9)),
     repeating-conic-gradient(from 0deg at 20% 70%,
-    hsla(0, 0%, 0%, 0.7) 0deg, 
-    hsla(0, 0%, 0%, 0.0) 0.5deg 
-    ),
+      hsla(0, 0%, 0%, 0.7) 0deg,
+      hsla(0, 0%, 0%, 0.0) 0.5deg),
     repeating-conic-gradient(from 0deg at 80% 5%,
-    hsla(0, 0%, 0%, 0.7) 0deg, 
-    hsla(0, 0%, 0%, 0.0) 0.5deg 
-    ),
+      hsla(0, 0%, 0%, 0.7) 0deg,
+      hsla(0, 0%, 0%, 0.0) 0.5deg),
     repeating-radial-gradient(circle at 50% 50%,
-    hsla(0, 0%, 0%, 0.7) 0%, 
-    hsla(0, 0%, 0%, 0.0) 0.5% 
-    )
-    ;
+      hsla(0, 0%, 0%, 0.7) 0%,
+      hsla(0, 0%, 0%, 0.0) 0.5%);
   color: white;
   margin: 0;
   padding: 0rem;
@@ -33,98 +27,46 @@
   min-height: 100vh;
   min-width: 100%;
   max-width: 100vw;
-  /* grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
-  display: grid;
   grid: "top"
-        "rest";
+    "rest";
   justify-items: center;
   box-sizing: border-box;
   perspective: 100vmin;
 }
 
 
-/* @media (prefers-reduced-motion: no-preference) {
-  .App {
-    animation: App-trix-up infinite 5s linear;
-    
-  }
-
-  @keyframes App-trix-up {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.01);
-    } 
-    100% {
-      transform: scale(1);
-    }
-  } */
-
-  /* .App > div {
-    animation: App-trix-down infinite 5s linear;
-  }
-  .App > header {
-    animation: App-trix-down infinite 5s linear;
-  } */
-
-
-
-/* @keyframes App-trix-down {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.75);
-  } 
-  100% {
-    transform: scale(1);
-  }
-} */
-
 .App-header {
   z-index: 2;
   grid-area: top;
-  /* grid-column: 1 / -1; */
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center; */
   font-size: calc(10px + 2vmin);
-  color: white; 
+  color: white;
 }
 
-.App-header > h1 {
+.App-header>h1 {
   margin: 0;
 }
 
-.App-header > h2 {
+.App-header>h2 {
   margin: 0 0 0.5rem 0;
   font-size: 1.2rem;
 }
 
-
-
 .btn {
-  background: 
-    repeating-radial-gradient(
-      circle at 50% 50%, 
-    hsla(199, 80%, 60%, 0.9) 0%, 
-    hsla(350, 80%, 60%, 0.9) 30%);
+  display: grid;
+  background:
+    repeating-radial-gradient(circle at 50% 50%,
+      hsla(199, 80%, 60%, 0.9) 0%,
+      hsla(350, 80%, 60%, 0.9) 30%);
   border: white 4px dashed;
   border-radius: 100%;
   box-sizing: border-box;
   color: white;
-  display: grid;
   font-size: calc(12px + 1.7vmin);
   width: 15vmin;
   height: 15vmin;
   min-width: 5rem;
   min-height: 5rem;
   text-shadow: 1px 1px black;
-  /* background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; */
   mix-blend-mode: difference;
   /* padding: 1rem; */
   place-content: center;
@@ -132,7 +74,7 @@
 }
 
 .flip {
-  filter: invert(90%)
+  filter: invert(90%);
 }
 
 @media (min-width: 400px) {

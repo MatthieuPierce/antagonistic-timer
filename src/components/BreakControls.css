@@ -1,17 +1,19 @@
 #breakPad {
+  display: grid;
   grid-area: rest;
-  transform: translate3d(-25vw, -30vh, -00vmin);
-  background: 
-  repeating-conic-gradient(from 20deg at 55% 30%, 
-    hsla(22, 40%, 40%, 0.6) 0deg,
-    hsla(300, 80%, 70%, 0.7) 1deg,
-    hsla(22, 40%, 40%, 0.6) 2deg
-    );
+  transform: translate3d(
+    var(--break-x-translate), 
+    var(--break-y-translate), 
+    var(--break-z-translate));
+  background:
+    repeating-conic-gradient(from 20deg at 55% 30%,
+      hsla(22, 40%, 40%, 0.6) 0deg,
+      hsla(300, 80%, 70%, 0.7) 1deg,
+      hsla(22, 40%, 40%, 0.6) 2deg);
   border-radius: 100%;
   box-sizing: border-box;
-  display: grid;
   grid: "top top"
-        "left right";
+    "left right";
   place-content: center;
   place-items: center;
   gap: 2px;
@@ -21,20 +23,17 @@
   min-width: 13rem;
   max-width: 100%;
   margin: 0rem;
-  /* padding: 15%; */
-
 }
 
 .break-header {
-  background: repeating-conic-gradient(from 21deg, 
-  hsla(22, 80%, 40%, 1) 0% 1deg,
-  hsla(300, 40%, 40%, 1) 1deg 2deg
-  );
+  display: grid;
+  background: repeating-conic-gradient(from 21deg,
+      hsla(22, 80%, 40%, 1) 0% 1deg,
+      hsla(300, 40%, 40%, 1) 1deg 2deg);
   color: white;
   border-radius: 100%;
   box-sizing: border-box;
   grid-area: top;
-  display: grid;
   place-content: center;
   place-items: center;
   height: 20vmin;
@@ -45,6 +44,7 @@
 
 .break-header h2 {
   box-sizing: border-box;
+  font-size: 2rem;
   width: 100%;
 }
 
@@ -54,4 +54,78 @@
 
 #break-increment {
   grid-area: right;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  #breakPad {
+    animation: rotatoZigBreak 12s infinite 3s linear;
+  }
+
+  @keyframes rotatoZigBreak {
+    0% {
+      transform:  
+        rotate3d(1, 1, 1, 0deg) 
+        translate3d(
+          var(--break-x-translate), 
+          var(--break-y-translate), 
+          var(--break-z-translate));
+    }
+    10% {
+      transform:  
+        rotate3d(1.1, 1.1, 1.1, -20deg)  
+        translate3d(
+          calc(var(--break-x-translate) + 0vw), 
+          calc(var(--break-y-translate) + 40vh), 
+          calc(var(--break-z-translate) + 0vmin));
+    }
+    25% {
+      transform:  
+      rotate3d(3.1, 3.1, 3.1, 45deg)  
+      translate3d(
+        calc(var(--break-x-translate) + 20vw), 
+        calc(var(--break-y-translate) + 0vh), 
+        calc(var(--break-z-translate) + 0vmin));
+    }
+    50% {
+      transform:  
+      rotate3d(0.5, 0.5, 0.5, -15deg)  
+      translate3d(
+        calc(var(--break-x-translate) + 0vw), 
+        calc(var(--break-y-translate) + 20vh), 
+        calc(var(--break-z-translate) + 0vmin));
+    }
+    60% {
+      transform:  
+      rotate3d(1.1, 1.1, 1.1, 195deg)  
+      translate3d(
+        calc(var(--break-x-translate) + 50vw), 
+        calc(var(--break-y-translate) + 0vh), 
+        calc(var(--break-z-translate) + 0vmin));
+    }
+    75% {
+      transform:  
+      rotate3d(0.1, 0.1, 0.1, 15deg)  
+      translate3d(
+        calc(var(--break-x-translate) + 5vw), 
+        calc(var(--break-y-translate) + 45vh), 
+        calc(var(--break-z-translate) + 0vmin));
+    }
+    90% {
+      transform:  
+      rotate3d(1.1, 1.1, 1.1, -1deg)  
+      translate3d(
+        calc(var(--break-x-translate) + 5vw), 
+        calc(var(--break-y-translate) + -25vh), 
+        calc(var(--break-z-translate) + 0vmin));
+    }
+    100% {
+      transform:  
+      rotate3d(1, 1, 1, 0deg) 
+      translate3d(
+        var(--break-x-translate), 
+        var(--break-y-translate), 
+        var(--break-z-translate));
+    }
+  }
 }
