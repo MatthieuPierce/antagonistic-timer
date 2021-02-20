@@ -59,7 +59,7 @@
 @media (prefers-reduced-motion: no-preference) {
 
   #breakPad {
-    animation: rotatoZigBreak 12s infinite 3s linear;
+    animation: rotatoZigBreak 15s infinite 3s linear;
   }
 
   @keyframes rotatoZigBreak {
@@ -97,7 +97,7 @@
     }
     60% {
       transform:  
-      rotate3d(1.1, 1.1, 0.5, 195deg)  
+      rotate3d(2.1, 1.1, 0.5, 195deg)  
       translate3d(
         calc(var(--break-x-translate) + 50vw), 
         calc(var(--break-y-translate) + 0vh), 
@@ -107,17 +107,18 @@
       transform:  
       rotate3d(0.1, 0.1, 0.1, 15deg)  
       translate3d(
-        calc(var(--break-x-translate) + 5vw), 
-        calc(var(--break-y-translate) + 35vh), 
+        calc(var(--break-x-translate) + 15vw), 
+        calc(var(--break-y-translate) + 45vh), 
         calc(var(--break-z-translate) + 0vmin));
     }
-    95% {
+    85% {
       transform:  
       rotate3d(0.5, 0.5, 0.5, -25deg)  
       translate3d(
         calc(var(--break-x-translate) + 55vw), 
         calc(var(--break-y-translate) + -8vh), 
         calc(var(--break-z-translate) + 0vmin));
+      z-index: 3;
     }
     100% {
       transform:  
