@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/antagonistic-timer/static/css/main.59327306.chunk.css",
+    "main.css": "/antagonistic-timer/static/css/main.3375b656.chunk.css",
     "main.js": "/antagonistic-timer/static/js/main.e8b2e262.chunk.js",
     "main.js.map": "/antagonistic-timer/static/js/main.e8b2e262.chunk.js.map",
     "runtime-main.js": "/antagonistic-timer/static/js/runtime-main.1313b129.js",
@@ -10,7 +10,7 @@
     "static/js/3.13d7daf0.chunk.js": "/antagonistic-timer/static/js/3.13d7daf0.chunk.js",
     "static/js/3.13d7daf0.chunk.js.map": "/antagonistic-timer/static/js/3.13d7daf0.chunk.js.map",
     "index.html": "/antagonistic-timer/index.html",
-    "static/css/main.59327306.chunk.css.map": "/antagonistic-timer/static/css/main.59327306.chunk.css.map",
+    "static/css/main.3375b656.chunk.css.map": "/antagonistic-timer/static/css/main.3375b656.chunk.css.map",
     "static/js/2.676caebc.chunk.js.LICENSE.txt": "/antagonistic-timer/static/js/2.676caebc.chunk.js.LICENSE.txt",
     "static/media/beeoowoop01.0d8a921e.mp3": "/antagonistic-timer/static/media/beeoowoop01.0d8a921e.mp3",
     "static/media/beeoowoop01.60efcc02.ogg": "/antagonistic-timer/static/media/beeoowoop01.60efcc02.ogg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.1313b129.js",
     "static/js/2.676caebc.chunk.js",
-    "static/css/main.59327306.chunk.css",
+    "static/css/main.3375b656.chunk.css",
     "static/js/main.e8b2e262.chunk.js"
   ]
 }
