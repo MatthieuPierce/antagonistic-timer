@@ -31,6 +31,7 @@
     "rest";
   justify-items: center;
   box-sizing: border-box;
+  overflow: hidden;
   perspective: 100vmin;
 }
 

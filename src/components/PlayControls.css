@@ -30,7 +30,7 @@
 @media (prefers-reduced-motion: no-preference) {
 
   #playPad {
-    animation: rotatoZigPlay 10s infinite 1s linear;
+    animation: rotatoZigPlay 10s infinite 5s linear;
   }
   @keyframes rotatoZigPlay {
     0% {
